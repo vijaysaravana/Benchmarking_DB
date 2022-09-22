@@ -1,0 +1,12 @@
+concurrency: 8
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+  300.0s        0         152837          509.5     15.7     12.6     41.9     58.7    436.2  
+concurrency: 16
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+  300.0s        0         171592          572.0     28.0     23.1     62.9    104.9    805.3  
+concurrency: 24
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+  300.0s        0         198804          662.7     36.2     30.4     83.9    142.6    771.8  
+concurrency: 32
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+  300.0s        0         223407          744.7     43.0     35.7     96.5    167.8    738.2  

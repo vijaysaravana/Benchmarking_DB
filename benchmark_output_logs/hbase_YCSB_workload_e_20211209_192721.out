@@ -1,0 +1,255 @@
+/usr/lib/jvm/zulu-8-azure-amd64/bin/java -cp /etc/hbase/conf:/home/sshuser/ycsb-0.17.0/hbase12-binding/conf:/home/sshuser/ycsb-0.17.0/conf:/home/sshuser/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/home/sshuser/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/core-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase12-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/log4j-1.2.17.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/commons-logging-1.2.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase10-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/findbugs-annotations-1.3.9-1.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-api-1.7.25.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase-shaded-client-1.2.5.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/htrace-core-3.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-log4j12-1.6.1.jar site.ycsb.Client -db site.ycsb.db.hbase12.HBaseClient12 -P ycsb-0.17.0/workloads/workloade -p table=usertable -p columnfamily=cf -p recordcount=100000 -p threadcount=24 -s -load
+Command line: -db site.ycsb.db.hbase12.HBaseClient12 -P ycsb-0.17.0/workloads/workloade -p table=usertable -p columnfamily=cf -p recordcount=100000 -p threadcount=24 -s -load
+YCSB Client 0.17.0
+
+Loading workload...
+log4j:ERROR Could not instantiate class [com.microsoft.log4jappender.FilterLogAppender].
+java.lang.ClassNotFoundException: com.microsoft.log4jappender.FilterLogAppender
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.log4j.helpers.Loader.loadClass(Loader.java:198)
+	at org.apache.log4j.helpers.OptionConverter.instantiateByClassName(OptionConverter.java:327)
+	at org.apache.log4j.helpers.OptionConverter.instantiateByKey(OptionConverter.java:124)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:785)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.apache.log4j.Logger.getLogger(Logger.java:104)
+	at org.apache.htrace.shaded.commons.logging.impl.Log4JLogger.getLogger(Log4JLogger.java:289)
+	at org.apache.htrace.shaded.commons.logging.impl.Log4JLogger.<init>(Log4JLogger.java:109)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.createLogFromClass(LogFactoryImpl.java:1116)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(LogFactoryImpl.java:914)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.newInstance(LogFactoryImpl.java:604)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.getInstance(LogFactoryImpl.java:336)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.getInstance(LogFactoryImpl.java:310)
+	at org.apache.htrace.shaded.commons.logging.LogFactory.getLog(LogFactory.java:685)
+	at org.apache.htrace.core.HTraceConfiguration.<clinit>(HTraceConfiguration.java:31)
+	at org.apache.htrace.core.Tracer$Builder.<init>(Tracer.java:47)
+	at site.ycsb.Client.getTracer(Client.java:458)
+	at site.ycsb.Client.main(Client.java:304)
+log4j:ERROR Could not instantiate appender named "FilterLog".
+Starting test.
+2021-12-09 19:27:21:817 0 sec: 0 operations; est completion in 0 second 
+2021-12-09 19:27:21,849 WARN  [Thread-23] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-12-09 19:27:22,359 INFO  [Thread-23] zookeeper.RecoverableZooKeeper: Process identifier=hconnection-0x21882f69 connecting to ZooKeeper ensemble=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181
+2021-12-09 19:27:22,364 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2021-12-09 19:27:22,364 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:host.name=hn0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.version=1.8.0_312
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.vendor=Azul Systems, Inc.
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/zulu-8-azure-amd64/jre
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.class.path=/etc/hbase/conf:/home/sshuser/ycsb-0.17.0/hbase12-binding/conf:/home/sshuser/ycsb-0.17.0/conf:/home/sshuser/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/home/sshuser/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/core-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase12-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/log4j-1.2.17.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/commons-logging-1.2.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase10-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/findbugs-annotations-1.3.9-1.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-api-1.7.25.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase-shaded-client-1.2.5.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/htrace-core-3.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-log4j12-1.6.1.jar
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.name=Linux
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.version=5.4.0-1063-azure
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.name=sshuser
+2021-12-09 19:27:22,365 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.home=/home/sshuser
+2021-12-09 19:27:22,366 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.dir=/home/sshuser
+2021-12-09 19:27:22,366 INFO  [Thread-23] zookeeper.ZooKeeper: Initiating client connection, connectString=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181 sessionTimeout=120000 watcher=hconnection-0x21882f690x0, quorum=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181, baseZNode=/hbase-unsecure
+2021-12-09 19:27:22,389 INFO  [Thread-23-SendThread(zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Opening socket connection to server zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+2021-12-09 19:27:22,397 INFO  [Thread-23-SendThread(zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Socket connection established to zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.4:2181, initiating session
+2021-12-09 19:27:22,410 INFO  [Thread-23-SendThread(zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Session establishment complete on server zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.4:2181, sessionid = 0x27da07e2408001e, negotiated timeout = 120000
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2021-12-09 19:27:31:805 10 sec: 8064 operations; 806.32 current ops/sec; est completion in 1 minute [INSERT: Count=8064, Max=249727, Min=5456, Avg=26437.6, 90=39199, 99=132607, 99.9=240383, 99.99=246143] 
+2021-12-09 19:27:41:805 20 sec: 17649 operations; 958.6 current ops/sec; est completion in 1 minute [INSERT: Count=9585, Max=251903, Min=5352, Avg=25022.54, 90=38143, 99=69887, 99.9=219775, 99.99=251519] 
+2021-12-09 19:27:51:805 30 sec: 27323 operations; 967.3 current ops/sec; est completion in 1 minute [INSERT: Count=9674, Max=240895, Min=5208, Avg=24826.54, 90=37375, 99=58015, 99.9=205951, 99.99=240383] 
+2021-12-09 19:28:01:805 40 sec: 36888 operations; 956.5 current ops/sec; est completion in 1 minute [INSERT: Count=9565, Max=361471, Min=5352, Avg=25058.83, 90=36127, 99=62655, 99.9=345599, 99.99=359935] 
+2021-12-09 19:28:11:805 50 sec: 46483 operations; 959.5 current ops/sec; est completion in 58 seconds [INSERT: Count=9596, Max=265727, Min=5352, Avg=25026.37, 90=36575, 99=67135, 99.9=246271, 99.99=262655] 
+2021-12-09 19:28:21:805 60 sec: 55969 operations; 948.6 current ops/sec; est completion in 48 seconds [INSERT: Count=9485, Max=267519, Min=5264, Avg=25300.44, 90=38751, 99=89535, 99.9=257791, 99.99=267007] 
+2021-12-09 19:28:31:805 70 sec: 65716 operations; 974.8 current ops/sec; est completion in 37 seconds [INSERT: Count=9747, Max=247807, Min=5276, Avg=24621.19, 90=36799, 99=61983, 99.9=245119, 99.99=247679] 
+2021-12-09 19:28:41:805 80 sec: 75122 operations; 940.51 current ops/sec; est completion in 27 seconds [INSERT: Count=9406, Max=266495, Min=5232, Avg=25514.28, 90=38527, 99=84351, 99.9=242303, 99.99=253695] 
+2021-12-09 19:28:51:805 90 sec: 83748 operations; 862.6 current ops/sec; est completion in 18 seconds [INSERT: Count=8626, Max=386303, Min=5664, Avg=27814.52, 90=39903, 99=179967, 99.9=354303, 99.99=381439] 
+2021-12-09 19:29:01:805 100 sec: 92687 operations; 893.9 current ops/sec; est completion in 8 second [INSERT: Count=8942, Max=360959, Min=5044, Avg=26828.34, 90=38175, 99=168319, 99.9=349951, 99.99=360959] 
+2021-12-09 19:29:11,077 INFO  [Thread-14] client.ConnectionManager$HConnectionImplementation: Closing zookeeper sessionid=0x27da07e2408001e
+2021-12-09 19:29:11,088 INFO  [Thread-14] zookeeper.ZooKeeper: Session: 0x27da07e2408001e closed
+2021-12-09 19:29:11,088 INFO  [Thread-23-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2021-12-09 19:29:11:103 109 sec: 100000 operations; 786.6 current ops/sec; [CLEANUP: Count=48, Max=77439, Min=1, Avg=1635.81, 90=40, 99=77439, 99.9=77439, 99.99=77439] [INSERT: Count=7310, Max=328191, Min=5412, Avg=27400.53, 90=39455, 99=198911, 99.9=323071, 99.99=328191] 
+[OVERALL], RunTime(ms), 109297
+[OVERALL], Throughput(ops/sec), 914.9381959248652
+[TOTAL_GCS_PS_Scavenge], Count, 42
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 233
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2131805996504936
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 42
+[TOTAL_GC_TIME], Time(ms), 233
+[TOTAL_GC_TIME_%], Time(%), 0.2131805996504936
+[CLEANUP], Operations, 48
+[CLEANUP], AverageLatency(us), 1635.8125
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 77439
+[CLEANUP], 95thPercentileLatency(us), 54
+[CLEANUP], 99thPercentileLatency(us), 77439
+[INSERT], Operations, 100000
+[INSERT], AverageLatency(us), 25731.16192
+[INSERT], MinLatency(us), 5044
+[INSERT], MaxLatency(us), 386303
+[INSERT], 95thPercentileLatency(us), 44799
+[INSERT], 99thPercentileLatency(us), 87679
+[INSERT], Return=OK, 100000
+/usr/lib/jvm/zulu-8-azure-amd64/bin/java -cp /etc/hbase/conf:/home/sshuser/ycsb-0.17.0/hbase12-binding/conf:/home/sshuser/ycsb-0.17.0/conf:/home/sshuser/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/home/sshuser/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/core-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase12-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/log4j-1.2.17.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/commons-logging-1.2.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase10-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/findbugs-annotations-1.3.9-1.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-api-1.7.25.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase-shaded-client-1.2.5.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/htrace-core-3.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-log4j12-1.6.1.jar site.ycsb.Client -db site.ycsb.db.hbase12.HBaseClient12 -P ycsb-0.17.0/workloads/workloade -p table=usertable -p columnfamily=cf -p recordcount=100000 -p operationcount=100000 -p threadcount=24 -s -t
+Command line: -db site.ycsb.db.hbase12.HBaseClient12 -P ycsb-0.17.0/workloads/workloade -p table=usertable -p columnfamily=cf -p recordcount=100000 -p operationcount=100000 -p threadcount=24 -s -t
+YCSB Client 0.17.0
+
+Loading workload...
+log4j:ERROR Could not instantiate class [com.microsoft.log4jappender.FilterLogAppender].
+java.lang.ClassNotFoundException: com.microsoft.log4jappender.FilterLogAppender
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.log4j.helpers.Loader.loadClass(Loader.java:198)
+	at org.apache.log4j.helpers.OptionConverter.instantiateByClassName(OptionConverter.java:327)
+	at org.apache.log4j.helpers.OptionConverter.instantiateByKey(OptionConverter.java:124)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:785)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.apache.log4j.Logger.getLogger(Logger.java:104)
+	at org.apache.htrace.shaded.commons.logging.impl.Log4JLogger.getLogger(Log4JLogger.java:289)
+	at org.apache.htrace.shaded.commons.logging.impl.Log4JLogger.<init>(Log4JLogger.java:109)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.createLogFromClass(LogFactoryImpl.java:1116)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.discoverLogImplementation(LogFactoryImpl.java:914)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.newInstance(LogFactoryImpl.java:604)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.getInstance(LogFactoryImpl.java:336)
+	at org.apache.htrace.shaded.commons.logging.impl.LogFactoryImpl.getInstance(LogFactoryImpl.java:310)
+	at org.apache.htrace.shaded.commons.logging.LogFactory.getLog(LogFactory.java:685)
+	at org.apache.htrace.core.HTraceConfiguration.<clinit>(HTraceConfiguration.java:31)
+	at org.apache.htrace.core.Tracer$Builder.<init>(Tracer.java:47)
+	at site.ycsb.Client.getTracer(Client.java:458)
+	at site.ycsb.Client.main(Client.java:304)
+log4j:ERROR Could not instantiate appender named "FilterLog".
+Starting test.
+2021-12-09 19:29:12:260 0 sec: 0 operations; est completion in 0 second 
+2021-12-09 19:29:12,340 WARN  [Thread-23] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-12-09 19:29:13,272 INFO  [Thread-23] zookeeper.RecoverableZooKeeper: Process identifier=hconnection-0x5a44df85 connecting to ZooKeeper ensemble=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181
+2021-12-09 19:29:13,278 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2021-12-09 19:29:13,279 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:host.name=hn0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net
+2021-12-09 19:29:13,279 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.version=1.8.0_312
+2021-12-09 19:29:13,279 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.vendor=Azul Systems, Inc.
+2021-12-09 19:29:13,280 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/zulu-8-azure-amd64/jre
+2021-12-09 19:29:13,280 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.class.path=/etc/hbase/conf:/home/sshuser/ycsb-0.17.0/hbase12-binding/conf:/home/sshuser/ycsb-0.17.0/conf:/home/sshuser/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/home/sshuser/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/home/sshuser/ycsb-0.17.0/lib/core-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase12-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/log4j-1.2.17.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/commons-logging-1.2.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase10-binding-0.17.0.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/findbugs-annotations-1.3.9-1.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-api-1.7.25.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/hbase-shaded-client-1.2.5.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/htrace-core-3.1.0-incubating.jar:/home/sshuser/ycsb-0.17.0/hbase12-binding/lib/slf4j-log4j12-1.6.1.jar
+2021-12-09 19:29:13,280 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2021-12-09 19:29:13,280 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.name=Linux
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:os.version=5.4.0-1063-azure
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.name=sshuser
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.home=/home/sshuser
+2021-12-09 19:29:13,281 INFO  [Thread-23] zookeeper.ZooKeeper: Client environment:user.dir=/home/sshuser
+2021-12-09 19:29:13,283 INFO  [Thread-23] zookeeper.ZooKeeper: Initiating client connection, connectString=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181 sessionTimeout=120000 watcher=hconnection-0x5a44df850x0, quorum=zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk3-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181,zk1-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181, baseZNode=/hbase-unsecure
+2021-12-09 19:29:13,319 INFO  [Thread-23-SendThread(zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Opening socket connection to server zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.5:2181. Will not attempt to authenticate using SASL (unknown error)
+2021-12-09 19:29:13,338 INFO  [Thread-23-SendThread(zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Socket connection established to zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.5:2181, initiating session
+2021-12-09 19:29:13,358 INFO  [Thread-23-SendThread(zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net:2181)] zookeeper.ClientCnxn: Session establishment complete on server zk0-yolodb.5vakhkcg4fweloe5xpowwvve1b.px.internal.cloudapp.net/10.0.0.5:2181, sessionid = 0x17da07e2d92002f, negotiated timeout = 120000
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2021-12-09 19:29:22:235 10 sec: 7380 operations; 738 current ops/sec; est completion in 2 minutes [INSERT: Count=397, Max=324095, Min=6256, Avg=18324.6, 90=26095, 99=133759, 99.9=324095, 99.99=324095] [SCAN: Count=7040, Max=521215, Min=1933, Avg=26180.34, 90=48703, 99=182271, 99.9=409599, 99.99=493823] 
+2021-12-09 19:29:32:236 20 sec: 23768 operations; 1638.47 current ops/sec; est completion in 1 minute [INSERT: Count=894, Max=54559, Min=5656, Avg=12237.68, 90=19439, 99=33151, 99.9=51071, 99.99=54559] [SCAN: Count=15445, Max=106879, Min=1312, Avg=14750.07, 90=29727, 99=51711, 99.9=75007, 99.99=96319] 
+2021-12-09 19:29:42:234 30 sec: 37846 operations; 1408.08 current ops/sec; est completion in 50 seconds [INSERT: Count=644, Max=144127, Min=5888, Avg=12922.47, 90=19535, 99=42335, 99.9=81151, 99.99=144127] [SCAN: Count=13443, Max=89727, Min=1655, Avg=17233.59, 90=34495, 99=52767, 99.9=68991, 99.99=86975] 
+2021-12-09 19:29:52:234 40 sec: 51070 operations; 1322.4 current ops/sec; est completion in 39 seconds [INSERT: Count=696, Max=88319, Min=6260, Avg=12601.52, 90=17967, 99=37759, 99.9=56287, 99.99=88319] [SCAN: Count=12514, Max=124799, Min=1688, Avg=18441.43, 90=36127, 99=59071, 99.9=98047, 99.99=124735] 
+2021-12-09 19:30:02:234 50 sec: 68275 operations; 1720.5 current ops/sec; est completion in 24 seconds [INSERT: Count=865, Max=362751, Min=5948, Avg=15252.27, 90=20287, 99=112511, 99.9=295423, 99.99=362751] [SCAN: Count=16346, Max=107903, Min=1241, Avg=13872.38, 90=27775, 99=47679, 99.9=69375, 99.99=85375] 
+2021-12-09 19:30:12:235 60 sec: 86779 operations; 1850.4 current ops/sec; est completion in 10 seconds [INSERT: Count=921, Max=249471, Min=5776, Avg=16058.51, 90=23359, 99=150271, 99.9=237695, 99.99=249471] [SCAN: Count=17580, Max=216575, Min=1215, Avg=12807.39, 90=25215, 99=43775, 99.9=193279, 99.99=208255] 
+2021-12-09 19:30:20,138 INFO  [Thread-19] client.ConnectionManager$HConnectionImplementation: Closing zookeeper sessionid=0x17da07e2d92002f
+2021-12-09 19:30:20,159 INFO  [Thread-23-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2021-12-09 19:30:20,159 INFO  [Thread-19] zookeeper.ZooKeeper: Session: 0x17da07e2d92002f closed
+2021-12-09 19:30:20:171 67 sec: 100000 operations; 1665.74 current ops/sec; [CLEANUP: Count=48, Max=56895, Min=4, Avg=1211.52, 90=27, 99=56895, 99.9=56895, 99.99=56895] [INSERT: Count=671, Max=225151, Min=5744, Avg=12267.44, 90=17375, 99=39999, 99.9=148863, 99.99=225151] [SCAN: Count=12544, Max=80895, Min=1280, Avg=12961.12, 90=26639, 99=43359, 99.9=56767, 99.99=63487] 
+[OVERALL], RunTime(ms), 67938
+[OVERALL], Throughput(ops/sec), 1471.930289381495
+[TOTAL_GCS_PS_Scavenge], Count, 31
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 407
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.5990756277782684
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 31
+[TOTAL_GC_TIME], Time(ms), 407
+[TOTAL_GC_TIME_%], Time(%), 0.5990756277782684
+[CLEANUP], Operations, 48
+[CLEANUP], AverageLatency(us), 1211.5208333333333
+[CLEANUP], MinLatency(us), 4
+[CLEANUP], MaxLatency(us), 56895
+[CLEANUP], 95thPercentileLatency(us), 64
+[CLEANUP], 99thPercentileLatency(us), 56895
+[INSERT], Operations, 5088
+[INSERT], AverageLatency(us), 14057.122641509433
+[INSERT], MinLatency(us), 5656
+[INSERT], MaxLatency(us), 362751
+[INSERT], 95thPercentileLatency(us), 26287
+[INSERT], 99thPercentileLatency(us), 73535
+[INSERT], Return=OK, 5088
+[SCAN], Operations, 94912
+[SCAN], AverageLatency(us), 15688.928997387053
+[SCAN], MinLatency(us), 1215
+[SCAN], MaxLatency(us), 521215
+[SCAN], 95thPercentileLatency(us), 38623
+[SCAN], 99thPercentileLatency(us), 56863
+[SCAN], Return=OK, 94912

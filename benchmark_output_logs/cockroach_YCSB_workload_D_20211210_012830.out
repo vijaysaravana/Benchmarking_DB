@@ -1,0 +1,19 @@
+I211210 01:28:46.626191 1 workload/workloadsql/dataload.go:146  [-] 1  imported usertable (16s, 100000 rows)
+I211210 01:28:46.793866 1 workload/cli/run.go:408  [-] 1  creating load generator...
+I211210 01:28:46.832930 1 workload/cli/run.go:439  [-] 2  creating load generator... done (took 39.061851ms)
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+   20.0s        0           62.7           62.8     46.1    335.5    520.1    805.3 insert
+   20.0s        0         1203.4         1205.8      8.9     46.1    100.7    260.0 read
+   40.0s        0           93.3           78.0     29.4     58.7    109.1    201.3 insert
+   40.0s        0         1770.4         1488.1     10.0     27.3     50.3    167.8 read
+   60.0s        0           93.4           83.2     29.4     62.9    113.2    234.9 insert
+   60.0s        0         1715.6         1563.9     10.5     28.3     50.3    243.3 read
+
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__total
+   60.6s        0           5054           83.4     51.4     30.4    209.7    335.5    805.3  insert
+
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__total
+   60.6s        0          94969         1567.4     12.6     10.0     30.4     71.3    260.0  read
+
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+   60.6s        0         100023         1650.8     14.5     10.5     37.7     96.5    805.3  
